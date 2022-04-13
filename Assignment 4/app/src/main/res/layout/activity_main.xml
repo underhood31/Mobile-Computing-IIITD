@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motion Sensor"
+            android:textSize="20sp"
+            android:paddingTop="10sp"/>
+
+<!--        Gyroscope-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+            <ToggleButton
+                android:id="@+id/gyro_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gyroscope"
+                android:paddingHorizontal="0sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/gyro_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/gyro_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Z: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/gyro_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+        </LinearLayout>
+
+<!--        Linear Acceleration-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+            <ToggleButton
+                android:id="@+id/acc_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Linear Acc"
+                android:paddingHorizontal="0sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/acc_x"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Y: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/acc_y"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Z: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/acc_z"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Environmental Sensor"
+            android:textSize="20sp"
+            android:paddingTop="10sp"/>
+
+<!--        Temperature Sensor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+            <ToggleButton
+                android:id="@+id/temp_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature"
+                android:paddingHorizontal="0sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Val: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/temp_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+        </LinearLayout>
+
+        <!--        Light Sensor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+            <ToggleButton
+                android:id="@+id/light_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light\t\t\t\t\t\t\t"
+                android:paddingHorizontal="0sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Val: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/light_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Positional Sensor"
+            android:textSize="20sp"
+            android:paddingTop="10sp"/>
+
+        <!--        Proximity Sensor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+            <ToggleButton
+                android:id="@+id/prox_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Proximity\t"
+                android:paddingHorizontal="0sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Val: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/prox_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+        </LinearLayout>
+
+        <!--        Orientation Sensor-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10sp">
+            <ToggleButton
+                android:id="@+id/orient_toggle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Orientation"
+                android:paddingHorizontal="0sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/orient_azimut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="P: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/orient_pitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="R: "
+                android:paddingLeft="10sp"/>
+            <TextView
+                android:id="@+id/orient_roll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.00"
+                android:paddingRight="10sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Other Information"
+            android:textSize="10sp"
+            android:paddingTop="10sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Is device stationary: "/>
+
+            <TextView
+                android:id="@+id/stationary_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="---"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10sp">
+            <Button
+                android:id="@+id/graphs"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Show Graphs"/>
+            <Space
+                android:layout_width="20sp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/gpsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Location Related"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
