@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".WifiLocationActivity"
+        android:orientation="vertical"
+        android:padding="10sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          android:text="Wifi Scans"
+          android:textSize="30sp"/>
+
+        <ListView
+            android:id="@+id/wifiList"
+            android:layout_width="wrap_content"
+            android:layout_height="300sp"
+            android:layout_margin="10sp"/>
+
+        <Button
+            android:id="@+id/refresh_wifi"
+            android:layout_width="match_parent"
+            android:layout_margin="10sp"
+            android:layout_height="wrap_content"
+            android:text="Refresh Wifi"/>
+
+
+        <TextView
+            android:id="@+id/CurrentLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="10sp"
+            android:layout_margin="5sp"/>
+        <Button
+            android:id="@+id/getLocationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Get Location"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:rowCount="2"
+            android:columnCount="2">
+            <EditText
+                android:id="@+id/locName"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:hint="Enter Location Name"/>
+
+            <Button
+                android:id="@+id/setLocation"
+                android:layout_columnWeight="1"
+                android:text="Set Location"/>
+
+        </GridLayout>
+
+
+      </LinearLayout>
+</ScrollView>

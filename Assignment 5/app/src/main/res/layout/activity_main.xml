@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:rowCount="2"
+            android:columnCount="2">
+
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                app:cardElevation="10sp"
+                app:cardCornerRadius="10sp"
+                app:cardMaxElevation="12sp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_margin="10sp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5sp"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+    <!--                <TextView-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Reset\nposition"-->
+    <!--                    android:textSize="30sp"/>-->
+    <!--                <Space-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="20sp"/>-->
+    <!--                <Button-->
+    <!--                    android:id="@+id/reset_button"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Reset"/>-->
+                    <androidx.constraintlayout.utils.widget.ImageFilterView
+                        android:layout_width="120sp"
+                        android:layout_height="120sp"
+                        android:id="@+id/compassImage"
+                        android:src="@drawable/compass"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0°"
+                        android:id="@+id/azim"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                app:cardElevation="10sp"
+                app:cardCornerRadius="10sp"
+                app:cardMaxElevation="12sp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_margin="5sp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10sp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Step\nCount"
+                        android:textSize="30sp"/>
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="20sp"/>
+
+                    <TextView
+                        android:id="@+id/stepCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="25sp"
+                        android:text="0"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:cardElevation="10sp"
+            app:cardCornerRadius="10sp"
+            app:cardMaxElevation="12sp"
+            app:cardPreventCornerOverlap="true"
+            android:layout_margin="15sp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:padding="10sp"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Stride Information"
+                   android:textSize="30sp"/>
+
+               <GridLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_margin="10sp"
+                   android:rowCount="2"
+                   android:columnCount="2">
+                   <Spinner
+                       android:id="@+id/genderSpinner"
+                       android:layout_gravity="fill"
+                       android:layout_columnWeight="1"
+                       android:layout_rowWeight="1"
+                       android:layout_margin="5sp"/>
+                   <Spinner
+                       android:id="@+id/feetSpinner"
+                       android:layout_gravity="fill"
+                       android:layout_columnWeight="1"
+                       android:layout_rowWeight="1"
+                       android:layout_margin="5sp"/>
+                   <Spinner
+                       android:id="@+id/inchSpinner"
+                       android:layout_gravity="fill"
+                       android:layout_columnWeight="1"
+                       android:layout_rowWeight="1"
+                       android:layout_margin="5sp"/>
+                   <Button
+                       android:layout_columnWeight="0.7"
+                       android:layout_rowWeight="1"
+                       android:id="@+id/edit_button"
+                       android:text="Edit"/>
+
+               </GridLayout>
+
+
+           </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <FrameLayout
+            android:id="@+id/frameMap"
+            android:layout_width="match_parent"
+            android:layout_height="150sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+<!--            <androidx.fragment.app.FragmentContainerView-->
+<!--                xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                xmlns:tools="http://schemas.android.com/tools"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:name="com.google.android.gms.maps.SupportMapFragment"-->
+<!--                android:id="@+id/map"-->
+<!--                tools:context="com.example.currentplacedetailsonmap.MapsActivityCurrentPlace"/>-->
+
+            <fragment
+                android:id="@+id/map"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.gms.maps.SupportMapFragment"/>
+        </FrameLayout>
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:rowCount="1"
+            android:columnCount="2">
+            <TextView
+                android:id="@+id/PDRCurrentLocation"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:text="Current Location"/>
+            <Button
+                android:id="@+id/PDRGetLocation"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:text="Get Location"/>
+
+        </GridLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:rowCount="2"
+            android:columnCount="2">
+            <EditText
+                android:id="@+id/PDRLocName"
+                android:layout_gravity="fill"
+                android:layout_columnWeight="1"
+                android:hint="Enter Location Name"/>
+
+            <Button
+                android:id="@+id/PDRSetLocation"
+                android:layout_columnWeight="1"
+                android:text="Set Location"/>
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/wifiActivityButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20sp"
+            android:text="Wifi Based Location"/>
+    </LinearLayout>
+</ScrollView>
